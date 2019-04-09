@@ -1,0 +1,39 @@
+@import url(../../lib/font/Open_Sans/open-sans.css);
+.reveal {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200; }
+
+.horizontal-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.avatar {
+  border-radius: 50%;
+  height: 25rem;
+  width: 25rem; }
+
+.twitter,
+.talend {
+  font-size: 2rem;
+  position: relative;
+  padding-left: 1rem; }
+  .twitter:before,
+  .talend:before {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    background-size: 3rem 3rem;
+    position: absolute;
+    right: 100%; }
+
+.twitter:before {
+  background-image: url(/images/twitter.png); }
+
+.talend:before {
+  background-image: url(/images/talend.png); }

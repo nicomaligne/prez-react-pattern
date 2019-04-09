@@ -1,0 +1,49 @@
+@import '../../lib/font/Open_Sans/open-sans.css';
+
+.reveal {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+}
+
+.horizontal-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 25rem;
+  width: 25rem;
+}
+
+$company-icon-size: 3rem;
+.twitter,
+.talend {
+  font-size: 2rem;
+  position: relative;
+  padding-left: 1rem;
+
+  &:before {
+    content: '';
+    width: $company-icon-size;
+    height: $company-icon-size;
+    background-size: $company-icon-size $company-icon-size;
+    position: absolute;
+    right: 100%;
+  }
+}
+
+.twitter:before {
+  background-image: url(/images/twitter.png);
+}
+
+.talend:before {
+  background-image: url(/images/talend.png);
+}
