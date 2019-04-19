@@ -1,10 +1,10 @@
-const webpack = require.main.require("webpack")
-const autoprefixer = require.main.require("autoprefixer")
-const autoPrefixerPlugin = autoprefixer({ browsers: ["last 2 versions"] })
-console.log("LLLLLOOOOOOLL")
+const autoprefixer = require.main.require("autoprefixer");
+const webpack = require.main.require("webpack");
+const autoPrefixerPlugin = autoprefixer({ browsers: ["last 2 versions"] });
+
 module.exports = ({ config }) => {
   config.module.rules.push({
-    test: /\.css$/,
+    test: /\.scss$/,
     use: [
       "style-loader",
       "css-loader",
@@ -13,9 +13,10 @@ module.exports = ({ config }) => {
         options: {
           plugins: [autoPrefixerPlugin]
         }
-      }
+      },
+      { loader: "sass-loader" }
     ]
-  })
+  });
 
-  return config
-}
+  return config;
+};

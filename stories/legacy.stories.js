@@ -1,21 +1,35 @@
-import React from 'react';
+import React from "react";
 
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 
-import pokemons from './pokemons';
-import List from '../src/common/List.component';
+import pokemons from "./pokemons";
+import List from "../src/common/List.component";
 
 const headers = [
-  { key: 'image', label: 'Image', type: 'image' },
-  { key: 'id', label: 'ID' },
-  { key: 'name', label: 'Name', type: 'main' },
-  { key: 'height', label: 'Height' },
-  { key: 'weight', label: 'Weight' },
-  { key: 'types', label: 'Types' },
-  { key: 'abilities', label: 'Abilities' },
+  { key: "image", label: "Image", type: "image" },
+  { key: "id", label: "ID", type: "id" },
+  { key: "name", label: "Name", type: "main" },
+  { key: "types", label: "Types", type: "list" },
+  { key: "abilities", label: "Abilities", type: "list" },
+  { key: "height", label: "Height", type: "number" },
+  { key: "weight", label: "Weight", type: "number" }
 ];
 
-storiesOf('Legacy', module)
-  .add('List', () => <List title="datasets" headers={headers} collection={pokemons} />)
-  .add('Step 1', () => <div>TODO</div>);
+storiesOf("Legacy", module)
+  .add("List - Table", () => (
+    <div style={{ height: "600px" }}>
+      <List title="datasets" headers={headers} collection={pokemons} />
+    </div>
+  ))
+  .add("List - Large", () => (
+    <div style={{ height: "600px" }}>
+      <List
+        title="datasets"
+        headers={headers}
+        collection={pokemons}
+        displayMode="large"
+      />
+    </div>
+  ))
+  .add("Step 1", () => <div>TODO</div>);
