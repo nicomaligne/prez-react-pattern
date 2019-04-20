@@ -1,3 +1,5 @@
+@import './colors';
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -11,7 +13,7 @@
 
 .list {
     font-family: sans-serif;
-    color: #808080;
+    color: $text-color;
 }
 
 .list-table {
@@ -24,18 +26,14 @@
     }
 
     thead {
-        background-color: #333;
-        color: #FDFDFD;
+        background: $primary;
+        color: $primary-reverse;
 
-        tr {
-            background: #36304a;
-
-            th {
-                text-align: left;
-                line-height: 1.2;
-                font-weight: unset;
-                font-size: 1.1rem;
-            }
+        th {
+            text-align: left;
+            line-height: 1.2;
+            font-size: 1.1rem;
+            font-weight: 200;
         }
     }
 
@@ -44,10 +42,10 @@
         overflow: hidden auto;
         width: 100%;
         height: 35rem;
-        box-shadow: 1px 1px 5px #7474748a;
+        box-shadow: $shadow;
 
         tr:nth-child(even) {
-            background-color: #f8f6ff;
+            background-color: $secondary;
         }
     }
 
@@ -100,7 +98,7 @@
     }
 
     li {
-        border: 1px solid #808080;
+        border: $border;
         border-radius: 0.5rem;
         margin: 1rem;
         padding: 1rem;
@@ -108,10 +106,18 @@
         display: flex;
         align-items: center;
 
-        box-shadow: 1px 1px 5px #7474748a;
+        box-shadow: $shadow;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $secondary;
+            box-shadow: 1px 1px 5px #aeacac;
+        }
     }
 
     h2 {
+        color: $primary;
+        font-weight: 200;
         margin: 0;
         display: flex;
         align-items: center;
