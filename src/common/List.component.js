@@ -85,7 +85,7 @@ function Large(props) {
               </h2>
               <dl>
                 {otherHeaders.map(header => (
-                  <div>
+                  <div className="list-large-keyvalue">
                     <dt>{header.label}</dt>
                     <dd>
                       <Value
