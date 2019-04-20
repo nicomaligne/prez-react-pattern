@@ -16,6 +16,12 @@
 
 .list-table {
     border-collapse: collapse;
+    width: 100%;
+
+    tr {
+        display: flex;
+        align-items: center;
+    }
 
     thead {
         background-color: #333;
@@ -23,8 +29,6 @@
 
         tr {
             background: #36304a;
-            display: block;
-            position: relative;
 
             th {
                 text-align: left;
@@ -37,7 +41,7 @@
 
     tbody {
         display: block;
-        overflow: auto;
+        overflow: hidden auto;
         width: 100%;
         height: 35rem;
         box-shadow: 1px 1px 5px #7474748a;
@@ -49,24 +53,24 @@
 
     th, td {
         padding: 0.5rem 1rem;
-        width: 6rem;
+        flex: 1 0 6rem;
 
         &.col-id {
-            width: 2rem;
+            flex: 0 0 2rem;
             text-align: center;
         }
 
         &.col-number {
-            width: 4rem;
+            flex: 0 0 4rem;
             text-align: right;
         }
 
         &.col-list {
-            width: 10rem;
+            flex: 2 1 10rem;
         }
 
         &.col-image {
-            width: 3rem;
+            flex: 0 0 3rem;
             padding: 0 0.5rem;
         }
 
@@ -111,6 +115,7 @@
         margin: 0;
         display: flex;
         align-items: center;
+        text-transform: capitalize;
     }
 
     img {
@@ -132,6 +137,10 @@
 
         .list-large-keyvalue {
             display: flex;
+        }
+
+        dt {
+            text-align: right;
         }
 
         dt, dd {

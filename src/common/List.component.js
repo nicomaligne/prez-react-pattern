@@ -64,11 +64,6 @@ function Large(props) {
       <ul>
         {collection.map(item => (
           <li>
-            <Value
-              header={imageHeader}
-              item={item}
-              name={item[mainHeader.key]}
-            />
             <div className="list-large-content">
               <h2>
                 <Value
@@ -98,6 +93,11 @@ function Large(props) {
                 ))}
               </dl>
             </div>
+            <Value
+              header={imageHeader}
+              item={item}
+              name={item[mainHeader.key]}
+            />
           </li>
         ))}
       </ul>
