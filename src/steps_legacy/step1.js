@@ -1,20 +1,47 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
+import List from '../common/List.component';
+import '../common/toolbar.scss';
 
-/*
-  A simple layout with a title and a button.
-  Nothing scary here.
-*/
-function Layout(props) {
-  const onClick = () => {
-    props.onClick()
-  }
-
+function Toolbar(props) {
   return (
-    <div>
-      <span>Hello world</span>
-      <button onClick={onClick}>button</button>
-    </div>
-  )
+    <nav className="toolbar">
+      {props.actions && (
+        <ul className="toolbar-actions">
+          {props.actions.map(({ label, ...buttonProps }) => (
+            <li key={buttonProps.id}>
+              <button {...buttonProps}>{label}</button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
 }
+Toolbar.propTypes = {
+  actions: PropTypes.arrayOf(PropTypes.object)
+};
 
-export { Layout }
+export default function ComplexList(props) {
+  return (
+    <div className="step1">
+      <Toolbar {...props.toolbar} />
+      <List {...props.list} />
+    </div>
+  );
+}
+ComplexList.propTypes = {
+  toolbar: PropTypes.shape({
+    actions: PropTypes.arrayOf(PropTypes.object)
+  }),
+  list: PropTypes.shape({
+    collection: PropTypes.arrayOf(PropTypes.object),
+    headers: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        type: PropTypes.string
+      })
+    ),
+    title: PropTypes.string
+  })
+};

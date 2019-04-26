@@ -1,22 +1,29 @@
 {
-  "name": "new",
+  "name": "prez-react-pattern",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "react": "16.8.3",
-    "react-dom": "16.8.3",
-    "react-scripts": "2.1.8"
+    "react-dom": "16.8.3"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-links": "^5.0.10",
+    "@storybook/addons": "^5.0.10",
+    "@storybook/react": "^5.0.10",
+    "autoprefixer": "^9.5.1",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.17.0",
+    "prop-types": "^15.7.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "typescript": "3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+    "start": "start-storybook -p 6006"
+  }
 }
