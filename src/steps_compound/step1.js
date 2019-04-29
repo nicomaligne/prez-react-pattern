@@ -1,15 +1,15 @@
-import React from "react"
+import React from 'react';
 
 function Button(props) {
-  return <button onClick={props.onClick}>{props.label}</button>
+  return <button onClick={props.onClick}>{props.label}</button>;
 }
 
 function Title(props) {
-  return <span>{props.label}</span>
+  return <span>{props.label}</span>;
 }
 
 function Layout(props) {
-  return <div>{props.children}</div>
+  return <div>{props.children}</div>;
 }
 
 /*

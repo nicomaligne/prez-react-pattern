@@ -26,6 +26,14 @@ ComplexList.propTypes = {
     value: PropTypes.string
   }),
 
+  // new feature: pagination
+  pagination: PropTypes.shape({
+    currentPage: PropTypes.number,
+    nbPages: PropTypes.number,
+    nbPerPage: PropTypes.number,
+    onChange: PropTypes.func
+  }),
+
   toolbar: PropTypes.shape({
     actions: PropTypes.arrayOf(PropTypes.object),
     onSelectAll: PropTypes.func
