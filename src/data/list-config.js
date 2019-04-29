@@ -1,13 +1,6 @@
-import React from 'react';
-
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import Step1 from '../src/steps_legacy/step1/story';
-import Step2 from '../src/steps_legacy/step2/story';
-import Step3 from '../src/steps_legacy/step3/story';
-
-const headers = [
+export const headers = [
   { key: 'image', label: 'Image', type: 'image' },
   { key: 'id', label: 'ID', type: 'id' },
   { key: 'name', label: 'Name', type: 'main' },
@@ -17,7 +10,7 @@ const headers = [
   { key: 'weight', label: 'Weight', type: 'number' }
 ];
 
-const actions = [
+export const actions = [
   {
     id: 'add',
     label: 'Add',
@@ -31,8 +24,3 @@ const actions = [
     className: 'btn'
   }
 ];
-
-storiesOf('Legacy', module)
-  .add('Step 1', () => <Step1 />)
-  .add('Step 2', () => <Step2 />)
-  .add('Step 3', () => <Step3 />);

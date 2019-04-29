@@ -155,5 +155,13 @@ export default function List(props) {
   }
 }
 List.propTypes = {
-  displayMode: PropTypes.string
+  displayMode: PropTypes.string,
+  collection: PropTypes.arrayOf(PropTypes.object),
+  headers: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      type: PropTypes.string
+    })
+  ),
+  title: PropTypes.string
 };

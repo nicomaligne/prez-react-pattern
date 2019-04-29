@@ -1,0 +1,23 @@
+@import './colors';
+
+.display-mode {
+    margin-left: auto;
+
+    button {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        margin: 0 0.5rem;
+
+        &.is-active {
+            background: $primary;
+            color: $primary-reverse;
+        }
+    }
+
+    svg {
+        width: 1rem;
+        height: 1rem;
+        fill: currentColor;
+    }
+}
