@@ -2,18 +2,27 @@ issue with storybook 5 : https://github.com/storybooks/storybook/issues/5919 / h
 
 have to : yarn add @storybook/theming
 
+part 1 :
+
+1 - presentation simple du cas métier et composant conditionné
+
+2 - synchro
+
+3 - more of the same => apropscalypse
+
+
 
 part 2 :
 
 Pour la suite je voyais
 
-1- explication du compound avec genre une tab bar + a quoi ça sert
+1 - explication du compound avec genre une tab bar + a quoi ça sert
 
-2- context react ~ comment est transmis l'info dans le compound
+2 - context react ~ comment est transmis l'info dans le compound
 
-3- application dans la liste en mode non controlé. Comme ça on utilise le contexte
+3 - application dans la liste en mode non controlé. Comme ça on utilise le contexte
 
-4- comment on ajoute le mode controlé, mais avant on doit expliqué ce qu'est le controlé/non-controlé
+4 - comment on ajoute le mode controlé, mais avant on doit expliqué ce qu'est le controlé/non-controlé
 
 
 ==> conclusion
