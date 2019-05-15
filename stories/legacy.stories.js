@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
-import pokemons from './pokemons';
 import List from '../src/common/List.component';
-import Step1ComplexList from '../src/steps_legacy/step1';
+import Step1 from '../src/steps_legacy/step1/story';
+import Step2 from '../src/steps_legacy/step2/story';
+import Step3 from '../src/steps_legacy/step3/story';
+import pokemons from '../src/data/pokemons';
 
 const headers = [
   { key: 'image', label: 'Image', type: 'image' },
@@ -17,40 +18,10 @@ const headers = [
   { key: 'weight', label: 'Weight', type: 'number' }
 ];
 
-const actions = [
-  {
-    id: 'add',
-    label: 'Add',
-    onClick: action('Add clicked'),
-    className: 'btn'
-  },
-  {
-    id: 'options',
-    label: 'Options',
-    onClick: action('Options clicked'),
-    className: 'btn'
-  }
-];
-
 storiesOf('Legacy', module)
-  .add('List - Table', () => (
-    <List title="datasets" headers={headers} collection={pokemons} />
+  .add('Simple list', () => (
+    <List title="Pokemons" headers={headers} collection={pokemons} />
   ))
-  .add('List - Large', () => (
-    <List
-      title="datasets"
-      headers={headers}
-      collection={pokemons}
-      displayMode="large"
-    />
-  ))
-  .add('Step 1', () => (
-    <Step1ComplexList
-      toolbar={{ actions }}
-      list={{
-        title: 'datasets',
-        headers,
-        collection: pokemons
-      }}
-    />
-  ));
+  .add('Step 1', () => <Step1 />)
+  .add('Step 2', () => <Step2 />)
+  .add('Step 3', () => <Step3 />);

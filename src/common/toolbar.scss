@@ -3,6 +3,19 @@
 .toolbar {
 	height: 3rem;
 	border: $border;
+	padding: 0 3rem;
+
+	display: flex;
+	align-items: center;
+	font-family: sans-serif;
+
+	form {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		margin-right: 2rem;
+		font-family: sans-serif;
+	}
 
 	ul {
 		list-style: none;
@@ -10,7 +23,7 @@
 
 		display: flex;
 		align-items: center;
-		padding: 0 2rem;
+		padding: 0;
 		margin: 0;
 	}
 
