@@ -1,26 +1,6 @@
 import React from 'react';
-// import { ComplexListPropTypes, ToolbarPropTypes } from './propTypes';
+import { List as CommonList } from '../../common/List.component';
 
-import SelectAll from '../../common/SelectAll.component';
-import List from '../../common/List.component';
+const List = ({ id }) => <CommonList id={`${id}-list`} />;
 
-import '../../common/toolbar.scss';
-
-export const SelectAll = ({ id, onSelectAll }) => (
-  <SelectAll id={`${id}-select`} onClick={onSelectAll} />
-);
-
-const DefautToolbarContent = ({ id }) => (
-  <React.Fragment>
-    <SelectAll id={id} onSelectAll={() => {}} />
-    <Actions actions={[]} />
-  </React.Fragment>
-);
-
-export const Toolbar = ({ id, children }) => {
-  return <nav className="toolbar">{children}</nav>;
-};
-
-export default function ComplexList({ children }) {
-  return <React.Fragment>{children}</React.Fragment>;
-}
+export default List;
