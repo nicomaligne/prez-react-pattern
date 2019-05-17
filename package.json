@@ -6,7 +6,6 @@
   "main": "src/index.js",
   "dependencies": {
     "@storybook/theming": "^5.0.11",
-    "global": "^4.3.2",
     "react": "16.8.3",
     "react-dom": "16.8.3"
   },
