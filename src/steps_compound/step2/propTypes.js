@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
-export const ListToolbarProptypes = {
+export const ToolbarProptypes = {
   children: PropTypes.node
 };
 
-export const ToolbarActionsPropTypes = {
+export const ActionsPropTypes = {
   actions: PropTypes.arrayOf(PropTypes.object)
 };
 
-export const ToolbarSelectAllPropTypes = {
+export const SelectAllPropTypes = {
   onSelectAll: PropTypes.func
 };
 
@@ -21,4 +21,9 @@ export const ListPropTypes = {
     })
   ),
   title: PropTypes.string
+};
+
+export const ManagerProptypes = {
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };

@@ -14,33 +14,35 @@ import {
 
 import { storiesOf } from '@storybook/react';
 
-storiesOf('Solution', module)
-  .add('Step 1 select all', () => (
+storiesOf('Solution step 1', module)
+  .add('with only select all', () => (
     <div>
       <Step1SelectAll />
     </div>
   ))
-  .add('Step 1 select all and actions inverted', () => (
+  .add('with select all and actions inverted', () => (
     <div>
-      <Step2ActionsAndSelectInverted />
+      <Step1ActionsAndSelectInverted />
     </div>
   ))
-  .add('Step 1 no toolbar', () => (
+  .add('with no toolbar', () => (
     <div>
-      <Step2NoToolbar />
+      <Step1NoToolbar />
     </div>
-  ))
-  .add('Step 2 select all', () => (
+  ));
+
+storiesOf('Solution step 2', module)
+  .add('with only select all', () => (
     <div>
       <Step2SelectAll />
     </div>
   ))
-  .add('Step 2 select all and actions inverted', () => (
+  .add('with select all and actions inverted', () => (
     <div>
       <Step2ActionsAndSelectInverted />
     </div>
   ))
-  .add('Step 2 no toolbar', () => (
+  .add('with no toolbar', () => (
     <div>
       <Step2NoToolbar />
     </div>
