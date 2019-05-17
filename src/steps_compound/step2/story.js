@@ -6,16 +6,13 @@ import { headers, actions } from '../../data/list-config';
 
 import CompoundList from './index';
 
-console.log({ CompoundList})
-
-export const Step1SelectAll = () => {
+export const Step2SelectAll = () => {
   return (
-    <React.Fragment>
-      <CompoundList.Toolbar id={'myToolbarId'}>
+    <CompoundList.Manager id={'listWithSelectAll'}>
+      <CompoundList.Toolbar>
         <CompoundList.SelectAll onSelectAll={action('onSelectAll')} />
       </CompoundList.Toolbar>
       <CompoundList.List
-        id={'myList_1'}
         title="datasets"
         headers={headers}
         collection={pokemons}
@@ -23,19 +20,18 @@ export const Step1SelectAll = () => {
         /
       </CompoundList.List>
       >
-    </React.Fragment>
+    </CompoundList.Manager>
   );
 };
 
-export const Step1ActionsAndSelectInverted = () => {
+export const Step2ActionsAndSelectInverted = () => {
   return (
-    <React.Fragment>
-      <CompoundList.Toolbar id={'myToolbarId'}>
+    <CompoundList.Manager id={'listWithInvertedItems'}>
+      <CompoundList.Toolbar>
         <CompoundList.Actions actions={actions} />
         <CompoundList.SelectAll onSelectAll={action('onSelectAll')} />
       </CompoundList.Toolbar>
       <CompoundList.List
-        id={'myList_2'}
         title="datasets"
         headers={headers}
         collection={pokemons}
@@ -43,15 +39,14 @@ export const Step1ActionsAndSelectInverted = () => {
         /
       </CompoundList.List>
       >
-    </React.Fragment>
+    </CompoundList.Manager>
   );
 };
 
-export const Step1NoToolbar = () => {
+export const Step2NoToolbar = () => {
   return (
-    <React.Fragment>
+    <CompoundList.Manager id={'listWithNoToolbar'}>
       <CompoundList.List
-        id={'myList_3'}
         title="datasets"
         headers={headers}
         collection={pokemons}
@@ -59,10 +54,6 @@ export const Step1NoToolbar = () => {
         /
       </CompoundList.List>
       >
-    </React.Fragment>
+    </CompoundList.Manager>
   );
-}
-
-/*
-export const Step1Default = () => {} ???
-*/
+};
