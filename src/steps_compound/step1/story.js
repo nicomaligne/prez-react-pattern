@@ -12,7 +12,7 @@ export const Step1SelectAll = () => {
   return (
     <React.Fragment>
       <CompoundList.Toolbar id={'myToolbarId'}>
-        <CompoundList.SelectAll onSelectAll={action('onSelectAll')} />
+        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
       </CompoundList.Toolbar>
       <CompoundList.List
         id={'myList_1'}
@@ -31,8 +31,8 @@ export const Step1ActionsAndSelectInverted = () => {
   return (
     <React.Fragment>
       <CompoundList.Toolbar id={'myToolbarId'}>
-        <CompoundList.Actions actions={actions} />
-        <CompoundList.SelectAll onSelectAll={action('onSelectAll')} />
+        <CompoundList.ToolbarActions actions={actions} />
+        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
       </CompoundList.Toolbar>
       <CompoundList.List
         id={'myList_2'}

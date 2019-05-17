@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const ListToolbarProptypes = {
+export const ToolbarPropTypes = {
   children: PropTypes.node
 };
 
@@ -9,10 +9,12 @@ export const ToolbarActionsPropTypes = {
 };
 
 export const ToolbarSelectAllPropTypes = {
+  id: PropTypes.string.isRequired,
   onSelectAll: PropTypes.func
 };
 
 export const ListPropTypes = {
+  id: PropTypes.string.isRequired,
   collection: PropTypes.arrayOf(PropTypes.object),
   headers: PropTypes.arrayOf(
     PropTypes.shape({
