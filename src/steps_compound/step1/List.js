@@ -1,6 +1,16 @@
 import React from 'react';
-import { List as CommonList } from '../../common/List.component';
+import CommonList from '../../common/List.component';
+import { ListPropTypes } from './propTypes';
 
-const List = ({ id }) => <CommonList id={`${id}-list`} />;
+const List = ({ id, title, headers, collection }) => (
+  <CommonList
+    collection={collection}
+    headers={headers}
+    id={`${id}-list`}
+    title={title}
+  />
+);
+
+List.propTypes = ListPropTypes;
 
 export default List;

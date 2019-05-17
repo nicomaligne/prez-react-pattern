@@ -1,11 +1,13 @@
 import Actions from './ToolbarActions';
-import SelectAll from './ToolbarSelectAll';
+import CompoundList from './CompoundList';
 import List from './List';
-import ListToolbar from './ListToolbar';
+import Toolbar from './ListToolbar';
+import SelectAll from './ToolbarSelectAll';
 
 export default {
   Actions,
-  SelectAll,
+  CompoundList,
   List,
-  ListToolbar
+  Toolbar,
+  SelectAll,
 };
