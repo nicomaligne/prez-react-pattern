@@ -6,13 +6,27 @@ import { headers, actions } from '../../data/list-config';
 
 import CompoundList from './index';
 
-console.log({ CompoundList})
+export const Step1NoToolbar = () => {
+  return (
+    <div>
+      <CompoundList.List
+        id={'myList_3'}
+        title="datasets"
+        headers={headers}
+        collection={pokemons}
+      >
+        /
+      </CompoundList.List>
+      >
+    </div>
+  );
+};
 
 export const Step1SelectAll = () => {
   return (
-    <React.Fragment>
+    <div>
       <CompoundList.Toolbar id={'myToolbarId'}>
-        <CompoundList.SelectAll onSelectAll={action('onSelectAll')} />
+        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
       </CompoundList.Toolbar>
       <CompoundList.List
         id={'myList_1'}
@@ -23,16 +37,16 @@ export const Step1SelectAll = () => {
         /
       </CompoundList.List>
       >
-    </React.Fragment>
+    </div>
   );
 };
 
 export const Step1ActionsAndSelectInverted = () => {
   return (
-    <React.Fragment>
+    <div>
       <CompoundList.Toolbar id={'myToolbarId'}>
-        <CompoundList.Actions actions={actions} />
-        <CompoundList.SelectAll onSelectAll={action('onSelectAll')} />
+        <CompoundList.ToolbarActions actions={actions} />
+        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
       </CompoundList.Toolbar>
       <CompoundList.List
         id={'myList_2'}
@@ -43,26 +57,6 @@ export const Step1ActionsAndSelectInverted = () => {
         /
       </CompoundList.List>
       >
-    </React.Fragment>
+    </div>
   );
 };
-
-export const Step1NoToolbar = () => {
-  return (
-    <React.Fragment>
-      <CompoundList.List
-        id={'myList_3'}
-        title="datasets"
-        headers={headers}
-        collection={pokemons}
-      >
-        /
-      </CompoundList.List>
-      >
-    </React.Fragment>
-  );
-}
-
-/*
-export const Step1Default = () => {} ???
-*/
