@@ -46,7 +46,7 @@ TableRow.propTypes = {
 function Table(props) {
   const { collection, id, headers, title } = props;
   return (
-    <table id={`list-${id}`} className="list list-table">
+    <table id={id} className="list list-table">
       <caption className="sr-only">{title}</caption>
       <thead>
         <tr>
@@ -87,7 +87,7 @@ function Large(props) {
   );
 
   return (
-    <div id={`list-${id}`} className="list list-large">
+    <div id={id} className="list list-large">
       <h1 className="sr-only">{title}</h1>
       <ul>
         {collection.map((item, index) => (
