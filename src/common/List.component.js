@@ -44,9 +44,9 @@ TableRow.propTypes = {
 };
 
 function Table(props) {
-  const { collection, headers, title } = props;
+  const { collection, id, headers, title } = props;
   return (
-    <table className="list list-table">
+    <table id={`list-${id}`} className="list list-table">
       <caption className="sr-only">{title}</caption>
       <thead>
         <tr>
@@ -77,7 +77,7 @@ TableRow.propTypes = {
 };
 
 function Large(props) {
-  const { collection, headers, title } = props;
+  const { collection, headers, id, title } = props;
   const idHeader = headers.find(({ type }) => type === 'id');
   const mainHeader = headers.find(({ type }) => type === 'main');
   const imageHeader = headers.find(({ type }) => type === 'image');
@@ -87,7 +87,7 @@ function Large(props) {
   );
 
   return (
-    <div className="list list-large">
+    <div id={`list-${id}`} className="list list-large">
       <h1 className="sr-only">{title}</h1>
       <ul>
         {collection.map((item, index) => (
@@ -156,12 +156,5 @@ export default function List(props) {
 }
 List.propTypes = {
   displayMode: PropTypes.string,
-  collection: PropTypes.arrayOf(PropTypes.object),
-  headers: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      type: PropTypes.string
-    })
-  ),
-  title: PropTypes.string
+  rest: PropTypes.object
 };

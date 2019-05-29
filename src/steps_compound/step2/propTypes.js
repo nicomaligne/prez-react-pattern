@@ -4,11 +4,11 @@ export const ToolbarProptypes = {
   children: PropTypes.node
 };
 
-export const ActionsPropTypes = {
+export const ToolbarActionsPropTypes = {
   actions: PropTypes.arrayOf(PropTypes.object)
 };
 
-export const SelectAllPropTypes = {
+export const ToolbarSelectAllPropTypes = {
   onSelectAll: PropTypes.func
 };
 

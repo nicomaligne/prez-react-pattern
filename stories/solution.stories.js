@@ -7,14 +7,12 @@ import {
 } from '../src/steps_compound/step1/story';
 
 import {
-  Step2SelectAll,
-  Step2ActionsAndSelectInverted,
-  Step2NoToolbar
+  Step2ActionsAndSelect,
 } from '../src/steps_compound/step2/story';
 
 import { storiesOf } from '@storybook/react';
 
-storiesOf('Solution', module)
+storiesOf('Solution step 1', module)
   .add('Step 1 no toolbar', () => <Step1NoToolbar />)
   .add('Step 1 select all', () => <Step1SelectAll />)
   .add('Step 1 select all and actions inverted', () => (
@@ -22,18 +20,6 @@ storiesOf('Solution', module)
   ));
 
 storiesOf('Solution step 2', module)
-  .add('with only select all', () => (
-    <div>
-      <Step2SelectAll />
-    </div>
-  ))
-  .add('with select all and actions inverted', () => (
-    <div>
-      <Step2ActionsAndSelectInverted />
-    </div>
-  ))
-  .add('with no toolbar', () => (
-    <div>
-      <Step2NoToolbar />
-    </div>
+  .add('with select all and actions', () => (
+    <Step2ActionsAndSelect />
   ));
