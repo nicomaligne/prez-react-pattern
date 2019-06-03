@@ -6,9 +6,13 @@ import {
   Step1NoToolbar
 } from '../src/steps_compound/step1/story';
 
+import { Step2ActionsAndSelect } from '../src/steps_compound/step2/story';
+
 import {
-  Step2ActionsAndSelect,
-} from '../src/steps_compound/step2/story';
+  Step3UncontrolledDisplayMode,
+  Step3UncontrolledDisplayModeWithInitialState,
+  Step3ControlledDisplayMode
+} from '../src/steps_compound/step3/story';
 
 import { storiesOf } from '@storybook/react';
 
@@ -19,7 +23,15 @@ storiesOf('Solution step 1', module)
     <Step1ActionsAndSelectInverted />
   ));
 
-storiesOf('Solution step 2', module)
-  .add('with select all and actions', () => (
-    <Step2ActionsAndSelect />
-  ));
+storiesOf('Solution step 2', module).add('with select all and actions', () => (
+  <Step2ActionsAndSelect />
+));
+
+storiesOf('Solution step 3', module)
+  .add('with uncontrolled display mode', () => (
+    <Step3UncontrolledDisplayMode />
+  ))
+  .add('with uncontrolled display mode and initial state', () => (
+    <Step3UncontrolledDisplayModeWithInitialState />
+  ))
+  .add('with controlled display mode', () => <Step3ControlledDisplayMode />);
