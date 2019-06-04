@@ -14,10 +14,11 @@ const ToolbarDisplayMode = ({
   } = useContextCompoundList();
 
   useEffect(() => {
+    console.log('toto')
     if (!displayModeValue && !displayModeContext) {
       setDisplayModeContext(initialDisplayMode);
     }
-  });
+  }, []);
 
   const onChange = (value) => {
     if (setDisplayModeValue) {
