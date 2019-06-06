@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useContextCompoundList } from './contextCompoundList';
+import { useContextList } from './contextList';
 import CommonDisplayMode from '../../common/DisplayMode.component';
 
 const ToolbarDisplayMode = ({
@@ -11,7 +11,7 @@ const ToolbarDisplayMode = ({
     id,
     displayModeContext,
     setDisplayModeContext
-  } = useContextCompoundList();
+  } = useContextList();
 
   useEffect(() => {
     if (!displayModeValue && !displayModeContext) {

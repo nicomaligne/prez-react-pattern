@@ -10,9 +10,10 @@ import { Step2ActionsAndSelect } from '../src/steps_compound/step2/story';
 
 import {
   Step3UncontrolledDisplayMode,
-  Step3UncontrolledDisplayModeWithInitialState,
-  Step3ControlledDisplayMode
+  Step3UncontrolledDisplayModeWithInitialState
 } from '../src/steps_compound/step3/story';
+
+import { Step4ControlledDisplayMode } from '../src/steps_compound/step4/story';
 
 import { storiesOf } from '@storybook/react';
 
@@ -28,10 +29,11 @@ storiesOf('Solution step 2', module).add('with select all and actions', () => (
 ));
 
 storiesOf('Solution step 3', module)
-  .add('with uncontrolled display mode', () => (
-    <Step3UncontrolledDisplayMode />
-  ))
+  .add('with uncontrolled display mode', () => <Step3UncontrolledDisplayMode />)
   .add('with uncontrolled display mode and initial state', () => (
     <Step3UncontrolledDisplayModeWithInitialState />
-  ))
-  .add('with controlled display mode', () => <Step3ControlledDisplayMode />);
+  ));
+
+storiesOf('Solution step 4', module).add('with controlled display mode', () => (
+  <Step4ControlledDisplayMode />
+));
