@@ -7,19 +7,14 @@ import { headers, actions } from '../../data/list-config';
 import List from './index';
 
 const ExternalLogicalDisplayMode = ({ children }) => {
-  const [increment, setIncrement] = useState(0);
-  const [outsideValue, setOutsideValue] = useState('large');
-  const onChangeOutsideValue = value => {
-    setIncrement(increment + 1);
-    if (increment === 2) {
-      action('do something');
-      setOutsideValue(value);
-      setIncrement(0);
-    }
+  const [displayModeValue, setDisplayModeValue] = useState('large');
+  const onChangeDisplayMode = value => {
+    console.log('this is my custon onChange display mode');
+    setDisplayModeValue(value);
   };
   return (
     <React.Fragment>
-      {children(outsideValue, onChangeOutsideValue)}
+      {children(displayModeValue, onChangeDisplayMode)}
     </React.Fragment>
   );
 };
@@ -27,23 +22,21 @@ const ExternalLogicalDisplayMode = ({ children }) => {
 export const Step4ControlledDisplayMode = () => {
   return (
     <ExternalLogicalDisplayMode>
-      {(outsideValue, onChangeOutsideValue) => (
+      {(displayModeValue, onChangeDisplayMode) => (
         <List.Manager id={'myContextId'}>
           <List.Toolbar>
-            <List.SelectAll
-              onSelectAll={action('onSelectAll')}
-            />
+            <List.SelectAll onSelectAll={action('onSelectAll')} />
             <List.Actions actions={actions} />
             <List.DisplayMode
-              displayModeValue={outsideValue}
-              setDisplayModeValue={onChangeOutsideValue}
+              value={displayModeValue}
+              onChange={onChangeDisplayMode}
             />
           </List.Toolbar>
           <List.List
             title="datasets"
             headers={headers}
             collection={pokemons}
-            displayModeValue={outsideValue}
+            displayModeValue={displayModeValue}
           />
         </List.Manager>
       )}

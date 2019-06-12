@@ -23,7 +23,7 @@ export const ListPropTypes = {
   title: PropTypes.string
 };
 
-export const ManagerProptypes = {
+export const ManagerPropTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 };

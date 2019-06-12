@@ -12,7 +12,7 @@ const DisplayMode = ({ initialDisplayMode = 'table' }) => {
   return (
     <CommonDisplayMode
       id={`toolbar-display-mode-${id}`}
-      onChange={value => setDisplayMode(value)}
+      onChange={setDisplayMode}
       value={displayMode}
     />
   );

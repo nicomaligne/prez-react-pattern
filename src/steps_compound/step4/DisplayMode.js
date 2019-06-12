@@ -3,35 +3,37 @@ import { useContextList } from './contextList';
 import CommonDisplayMode from '../../common/DisplayMode.component';
 
 const ToolbarDisplayMode = ({
-  initialDisplayMode = 'table',
-  displayModeValue,
-  setDisplayModeValue
+  initialValue = 'table',
+  value,
+  onChange
 }) => {
   const {
     id,
-    displayModeContext,
-    setDisplayModeContext
+    displayMode,
+    setDisplayMode
   } = useContextList();
 
+  const controlled = !!onChange;
+
   useEffect(() => {
-    if (!displayModeValue && !displayModeContext) {
-      setDisplayModeContext(initialDisplayMode);
+    if (!controlled) {
+      setDisplayMode(initialValue);
     }
   }, []);
 
-  const onChange = (value) => {
-    if (setDisplayModeValue) {
-      setDisplayModeValue(value);
+  const onChangeHandler = (value) => {
+    if (onChange) {
+      onChange(value);
     } else {
-      setDisplayModeContext(value);
+      setDisplayMode(value);
     }
   };
 
   return (
     <CommonDisplayMode
       id={`toolbar-display-mode-${id}`}
-      onChange={onChange}
-      value={displayModeValue || displayModeContext}
+      onChange={onChangeHandler}
+      value={value || displayMode}
     />
   );
 };

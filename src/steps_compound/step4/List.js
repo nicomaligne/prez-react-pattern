@@ -8,7 +8,7 @@ const List = ({ title, headers, collection, displayModeValue }) => {
   return (
     <CommonList
       collection={collection}
-      displayMode={displayModeValue || displayModeContext}
+      displayMode={displayModeValue || displayMode}
       headers={headers}
       id={`${id}-list`}
       title={title}

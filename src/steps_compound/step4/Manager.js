@@ -9,8 +9,8 @@ const Manager = ({ id, children }) => {
     <Provider
       value={{
         id,
-        displayModeContext: displayMode,
-        setDisplayModeContext: setDisplayMode
+        displayMode,
+        setDisplayMode
       }}
     >
       {children}
