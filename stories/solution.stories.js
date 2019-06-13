@@ -13,8 +13,6 @@ import {
   Step3UncontrolledDisplayModeWithInitialState
 } from '../src/steps_compound/step3/story';
 
-import { Step4ControlledDisplayMode } from '../src/steps_compound/step4/story';
-
 import { storiesOf } from '@storybook/react';
 
 storiesOf('Solution step 1', module)
@@ -33,7 +31,3 @@ storiesOf('Solution step 3', module)
   .add('with uncontrolled display mode and initial state', () => (
     <Step3UncontrolledDisplayModeWithInitialState />
   ));
-
-storiesOf('Solution step 4', module).add('with controlled display mode', () => (
-  <Step4ControlledDisplayMode />
-));
