@@ -1,4 +1,0 @@
-/*
-  manager
-  context source of truth
-*/
