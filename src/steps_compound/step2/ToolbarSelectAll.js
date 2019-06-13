@@ -2,10 +2,10 @@ import React from 'react';
 import CommonSelectAll from '../../common/SelectAll.component';
 import '../../common/toolbar.scss';
 import { ToolbarSelectAllPropTypes } from './propTypes';
-import { useContextCompoundList } from './contextCompoundList';
+import { useContextList } from './contextList';
 
 const ToolbarSelectAll = ({ onSelectAll }) => {
-  const { id } = useContextCompoundList();
+  const { id } = useContextList();
   return <CommonSelectAll id={`${id}-select`} onClick={onSelectAll} />;
 };
 

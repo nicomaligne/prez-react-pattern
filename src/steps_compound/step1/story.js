@@ -14,10 +14,7 @@ export const Step1NoToolbar = () => {
         title="datasets"
         headers={headers}
         collection={pokemons}
-      >
-        /
-      </CompoundList.List>
-      >
+      />
     </div>
   );
 };
@@ -33,30 +30,24 @@ export const Step1SelectAll = () => {
         title="datasets"
         headers={headers}
         collection={pokemons}
-      >
-        /
-      </CompoundList.List>
-      >
+      />
     </div>
   );
 };
 
-export const Step1ActionsAndSelectInverted = () => {
+export const Step1ListInverted = () => {
   return (
     <div>
-      <CompoundList.Toolbar id={'myToolbarId'}>
-        <CompoundList.ToolbarActions actions={actions} />
-        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
-      </CompoundList.Toolbar>
       <CompoundList.List
         id={'myList_2'}
         title="datasets"
         headers={headers}
         collection={pokemons}
-      >
-        /
-      </CompoundList.List>
-      >
+      />
+      <CompoundList.Toolbar id={'myToolbarId'}>
+        <CompoundList.ToolbarActions actions={actions} />
+        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
+      </CompoundList.Toolbar>
     </div>
   );
 };

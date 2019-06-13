@@ -1,10 +1,10 @@
 import React from 'react';
 import CommonList from '../../common/List.component';
 import { ListPropTypes } from './propTypes';
-import { useContextCompoundList } from './contextCompoundList';
+import { useContextList } from './contextList';
 
 const List = ({ title, headers, collection }) => {
-  const { id } = useContextCompoundList();
+  const { id } = useContextList();
   return (
     <CommonList
       collection={collection}
