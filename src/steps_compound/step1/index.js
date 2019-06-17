@@ -1,11 +1,11 @@
-import ToolbarActions from './ToolbarActions';
-import List from './List';
+import ListActions from './ListActions';
+import ListTable from './ListTable';
 import Toolbar from './Toolbar';
-import ToolbarSelectAll from './ToolbarSelectAll';
+import ListSelectAll from './ListSelectAll';
 
 export default {
-  List,
+  Table: ListTable,
   Toolbar,
-  ToolbarActions,
-  ToolbarSelectAll,
+  Actions: ListActions,
+  SelectAll: ListSelectAll,
 };

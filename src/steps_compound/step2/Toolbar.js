@@ -2,10 +2,6 @@ import React from 'react';
 import '../../common/toolbar.scss';
 import { ToolbarProptypes } from './propTypes';
 
-/*
-    Add a default render ?
-*/
-
 const Toolbar = ({ children }) => <nav className="toolbar">{children}</nav>;
 
 Toolbar.propTypes = ToolbarProptypes;

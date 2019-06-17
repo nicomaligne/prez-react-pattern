@@ -1,9 +1,9 @@
 import { createContext, useContext } from 'react';
 
-const contextList = createContext();
+const listContext = createContext();
 
-const useContextList = () => {
-  const context = useContext(contextList);
+const useListContext = () => {
+  const context = useContext(listContext);
   if (!context) {
     throw new Error(
       'You are using some components of the List, outside the manager provider scope'
@@ -12,4 +12,4 @@ const useContextList = () => {
   return context;
 };
 
-export { contextList, useContextList };
+export { listContext, useListContext };

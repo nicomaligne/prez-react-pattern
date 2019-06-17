@@ -1,15 +1,15 @@
 import React from 'react';
 import Actions from '../../common/Actions.component';
 import '../../common/toolbar.scss';
-import { ToolbarActionsPropTypes } from './propTypes';
+import { ListActionsPropTypes } from './propTypes';
 
-const ToolbarActions = ({ actions, className }) => (
+const ListActions = ({ actions, className }) => (
   <Actions
     className={className ? className : 'toolbar-actions'}
     actions={actions}
   />
 );
 
-ToolbarActions.propTypes = ToolbarActionsPropTypes;
+ListActions.propTypes = ListActionsPropTypes;
 
-export default ToolbarActions;
+export default ListActions;

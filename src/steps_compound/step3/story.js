@@ -14,11 +14,7 @@ export const Step3UncontrolledDisplayMode = () => {
         <List.Actions actions={actions} />
         <List.DisplayMode />
       </List.Toolbar>
-      <List.List
-        title="datasets"
-        headers={headers}
-        collection={pokemons}
-      />
+      <List.Table title="datasets" headers={headers} collection={pokemons} />
     </List.Manager>
   );
 };
@@ -31,11 +27,7 @@ export const Step3UncontrolledDisplayModeWithInitialState = () => {
         <List.Actions actions={actions} />
         <List.DisplayMode initialDisplayMode="large" />
       </List.Toolbar>
-      <List.List
-        title="datasets"
-        headers={headers}
-        collection={pokemons}
-      />
+      <List.Table title="datasets" headers={headers} collection={pokemons} />
     </List.Manager>
   );
 };
