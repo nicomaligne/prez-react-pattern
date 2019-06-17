@@ -4,20 +4,17 @@ import { action } from '@storybook/addon-actions';
 import pokemons from '../../data/pokemons';
 import { headers, actions } from '../../data/list-config';
 
-import CompoundList from './index';
+import List from './index';
 
 export const Step1NoToolbar = () => {
   return (
     <div>
-      <CompoundList.List
-        id={'myList_3'}
+      <List.Table
+        id={'my-list'}
         title="datasets"
         headers={headers}
         collection={pokemons}
-      >
-        /
-      </CompoundList.List>
-      >
+      />
     </div>
   );
 };
@@ -25,18 +22,15 @@ export const Step1NoToolbar = () => {
 export const Step1SelectAll = () => {
   return (
     <div>
-      <CompoundList.Toolbar id={'myToolbarId'}>
-        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
-      </CompoundList.Toolbar>
-      <CompoundList.List
-        id={'myList_1'}
+      <List.Toolbar>
+        <List.SelectAll id={'my-list'} onSelectAll={action('onSelectAll')} />
+      </List.Toolbar>
+      <List.Table
+        id={'my-list'}
         title="datasets"
         headers={headers}
         collection={pokemons}
-      >
-        /
-      </CompoundList.List>
-      >
+      />
     </div>
   );
 };
@@ -44,19 +38,16 @@ export const Step1SelectAll = () => {
 export const Step1ActionsAndSelectInverted = () => {
   return (
     <div>
-      <CompoundList.Toolbar id={'myToolbarId'}>
-        <CompoundList.ToolbarActions actions={actions} />
-        <CompoundList.ToolbarSelectAll onSelectAll={action('onSelectAll')} />
-      </CompoundList.Toolbar>
-      <CompoundList.List
-        id={'myList_2'}
+      <List.Toolbar >
+        <List.Actions actions={actions} id={'my-list'} />
+        <List.SelectAll onSelectAll={action('onSelectAll')} id={'my-list'} />
+      </List.Toolbar>
+      <List.Table
+        id={'my-list'}
         title="datasets"
         headers={headers}
         collection={pokemons}
-      >
-        /
-      </CompoundList.List>
-      >
+      />
     </div>
   );
 };

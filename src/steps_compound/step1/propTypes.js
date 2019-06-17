@@ -4,17 +4,18 @@ export const ToolbarPropTypes = {
   children: PropTypes.node
 };
 
-export const ToolbarActionsPropTypes = {
-  actions: PropTypes.arrayOf(PropTypes.object)
+export const ListActionsPropTypes = {
+  actions: PropTypes.arrayOf(PropTypes.object),
+  className: PropTypes.string,
+  id: PropTypes.string.isRequired
 };
 
-export const ToolbarSelectAllPropTypes = {
+export const ListSelectAllPropTypes = {
   id: PropTypes.string.isRequired,
   onSelectAll: PropTypes.func
 };
 
-export const ListPropTypes = {
-  id: PropTypes.string.isRequired,
+export const ListTablePropTypes = {
   collection: PropTypes.arrayOf(PropTypes.object),
   headers: PropTypes.arrayOf(
     PropTypes.shape({
@@ -22,5 +23,6 @@ export const ListPropTypes = {
       type: PropTypes.string
     })
   ),
+  id: PropTypes.string.isRequired,
   title: PropTypes.string
 };

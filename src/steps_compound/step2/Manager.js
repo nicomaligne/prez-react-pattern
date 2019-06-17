@@ -1,9 +1,9 @@
 import React from 'react';
-import { contextCompoundList } from './contextCompoundList';
+import { listContext } from './listContext';
 import { ManagerPropTypes } from './propTypes';
 
 const Manager = ({ id, children }) => {
-  const { Provider } = contextCompoundList;
+  const { Provider } = listContext;
   return <Provider value={{ id }}>{children}</Provider>;
 };
 
