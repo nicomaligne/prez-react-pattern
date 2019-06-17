@@ -5,7 +5,8 @@ export const ToolbarProptypes = {
 };
 
 export const ListActionsPropTypes = {
-  actions: PropTypes.arrayOf(PropTypes.object)
+  actions: PropTypes.arrayOf(PropTypes.object),
+  className: PropTypes.string,
 };
 
 export const ListSelectAllPropTypes = {

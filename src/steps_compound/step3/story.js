@@ -8,7 +8,7 @@ import List from './index';
 
 export const Step3UncontrolledDisplayMode = () => {
   return (
-    <List.Manager id={'myContextId'}>
+    <List.Manager id={'my-list'}>
       <List.Toolbar>
         <List.SelectAll onSelectAll={action('onSelectAll')} />
         <List.Actions actions={actions} />
@@ -21,7 +21,7 @@ export const Step3UncontrolledDisplayMode = () => {
 
 export const Step3UncontrolledDisplayModeWithInitialState = () => {
   return (
-    <List.Manager id={'myContextId'}>
+    <List.Manager id={'my-list'}>
       <List.Toolbar>
         <List.SelectAll onSelectAll={action('onSelectAll')} />
         <List.Actions actions={actions} />

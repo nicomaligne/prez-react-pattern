@@ -5,7 +5,9 @@ export const ToolbarPropTypes = {
 };
 
 export const ListActionsPropTypes = {
-  actions: PropTypes.arrayOf(PropTypes.object)
+  actions: PropTypes.arrayOf(PropTypes.object),
+  className: PropTypes.string,
+  id: PropTypes.string.isRequired
 };
 
 export const ListSelectAllPropTypes = {
@@ -14,7 +16,6 @@ export const ListSelectAllPropTypes = {
 };
 
 export const ListTablePropTypes = {
-  id: PropTypes.string.isRequired,
   collection: PropTypes.arrayOf(PropTypes.object),
   headers: PropTypes.arrayOf(
     PropTypes.shape({
@@ -22,5 +23,6 @@ export const ListTablePropTypes = {
       type: PropTypes.string
     })
   ),
+  id: PropTypes.string.isRequired,
   title: PropTypes.string
 };

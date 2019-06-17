@@ -10,7 +10,7 @@ export const Step1NoToolbar = () => {
   return (
     <div>
       <List.Table
-        id={'myList_3'}
+        id={'my-list'}
         title="datasets"
         headers={headers}
         collection={pokemons}
@@ -22,11 +22,11 @@ export const Step1NoToolbar = () => {
 export const Step1SelectAll = () => {
   return (
     <div>
-      <List.Toolbar id={'myToolbarId'}>
-        <List.SelectAll onSelectAll={action('onSelectAll')} />
+      <List.Toolbar>
+        <List.SelectAll id={'my-list'} onSelectAll={action('onSelectAll')} />
       </List.Toolbar>
       <List.Table
-        id={'myList_1'}
+        id={'my-list'}
         title="datasets"
         headers={headers}
         collection={pokemons}
@@ -38,12 +38,12 @@ export const Step1SelectAll = () => {
 export const Step1ActionsAndSelectInverted = () => {
   return (
     <div>
-      <List.Toolbar id={'myToolbarId'}>
-        <List.Actions actions={actions} />
-        <List.SelectAll onSelectAll={action('onSelectAll')} />
+      <List.Toolbar >
+        <List.Actions actions={actions} id={'my-list'} />
+        <List.SelectAll onSelectAll={action('onSelectAll')} id={'my-list'} />
       </List.Toolbar>
       <List.Table
-        id={'myList_2'}
+        id={'my-list'}
         title="datasets"
         headers={headers}
         collection={pokemons}

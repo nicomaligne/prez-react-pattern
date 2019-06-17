@@ -9,7 +9,7 @@ const ListTable = ({ title, headers, collection }) => {
     <List
       collection={collection}
       headers={headers}
-      id={`${id}-list`}
+      id={`${id}-table`}
       title={title}
     />
   );

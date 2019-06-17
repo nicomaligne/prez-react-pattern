@@ -10,7 +10,7 @@ const ListTable = ({ title, headers, collection }) => {
       collection={collection}
       displayMode={displayMode}
       headers={headers}
-      id={`${id}-list`}
+      id={`${id}-table`}
       title={title}
     />
   );

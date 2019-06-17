@@ -11,7 +11,7 @@ const ListDisplayMode = ({ initialDisplayMode = 'table' }) => {
 
   return (
     <DisplayMode
-      id={`toolbar-display-mode-${id}`}
+      id={`${id}-display-mode`}
       onChange={setDisplayMode}
       value={displayMode}
     />

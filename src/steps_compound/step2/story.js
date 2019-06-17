@@ -10,7 +10,7 @@ import List from './index';
 export const Step2ActionsAndSelect = () => {
   console.log({ List })
   return (
-    <List.Manager id={'myContextId'}>
+    <List.Manager id={'my-list'}>
       <List.Toolbar>
         <List.SelectAll onSelectAll={action('onSelectAll')} />
         <List.Actions actions={actions} />
