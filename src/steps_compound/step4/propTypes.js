@@ -4,7 +4,7 @@ export const ToolbarProptypes = {
   children: PropTypes.node
 };
 
-export const ListtActionsPropTypes = {
+export const ListActionsPropTypes = {
   actions: PropTypes.arrayOf(PropTypes.object)
 };
 
