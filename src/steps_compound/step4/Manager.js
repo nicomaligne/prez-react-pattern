@@ -21,10 +21,6 @@ const Manager = ({ id, children, initialDisplayMode }) => {
     reducer,
     initialState(initialDisplayMode)
   );
-  // const [displayMode, setDisplayMode] = useState('');
-  // const value = useMemo(() => ({ id, displayMode, setDisplayMode }), [
-  //   displayMode
-  // ]);
   const value = { state, dispatch };
   return <Provider value={value}>{children}</Provider>;
 };
