@@ -27,7 +27,10 @@ export default function ComplexList(props) {
 
   return (
     <React.Fragment>
-      <Toolbar id={`${id}-toolbar`} {...toolbar} />
+      <nav className="toolbar">
+        {onSelectAll && <SelectAll id={`${id}-select`} onClick={onSelectAll} />}
+        {actions && <Actions className="toolbar-actions" actions={actions} />}
+      </nav>
       <List id={`${id}-list`} {...list} />
     </React.Fragment>
   );
